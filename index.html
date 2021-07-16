@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Forms</title>
+</head>
+
+<body id="body2">
+    <nav>
+        <ul id="menu">
+            <a href="#" onclick="togglePopup2()" class="third-button">SIGN UP</a>
+            <a href="#" onclick="togglePopup()" class="first-button">LOG IN</a>
+
+        </ul>
+    </nav>
+    <div class="popup" id="popup-1">
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup()">
+                ×</div>
+
+            <h1>Sign in</h1>
+            <div class="input-field"><input placeholder="victorinenyagwala@gmail.com" class="validate"></div>
+            <div class="input-field"><input placeholder="........" class="validate"></div>
+            <button class="second-button">Sign in</button>
+            <p>Don't have an account? <a href="#" onclick="togglePopup2()" style="text-decoration: none;">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="popup2" id="popup-2">
+        <div class="content2">
+            <div class="close-btn2" onclick="togglePopup2()">
+                ×</div>
+
+            <h1>Sign in</h1>
+            <div class="input-field2"><input placeholder="Victorine Amani" class="validate2"></div>
+            <div class="input-field2"><input placeholder="victorinenyagwala@gmail.com" class="validate2"></div>
+            <div class="input-field2"><input placeholder="21/Sep/2001" class="validate2"></div>
+            <div class="input-field2"><input placeholder="Nairobi, Kenya" class="validate2"></div>
+            <div class="input-field2"><input placeholder="........." class="validate2"></div>
+            <div class="input-field2"><input placeholder="........." class="validate2"></div>
+            <button class="second-button">Sign in</button>
+            <p>Already have an account? <a href="#" onclick="togglePopup()" class="first-button" style="text-decoration: none;">Log in</a>
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <img class="mySlides" src="images/house1.png" style="width:80%;height:90vh;padding-left: 10%;">
+        <img class="mySlides" src="images/house4.jpg" style="width:80%;height:90vh;padding-left: 10%;">
+        <img class="mySlides" src="images/house6.jpg" style="width:80%;height:90vh;padding-left: 10%;">
+        <img class="mySlides" src="images/house6.jpeg" style="width:80%;height:90vh;padding-left: 10%;">
+        <img class="mySlides" src="images/nothern star.jpg" style="width:80%; height:90vh;padding-left: 10%;">
+
+
+    </div>
+
+
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+
+
+        function
+        carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+
+        }
+
+        function togglePopup() {
+            document.getElementById("popup-1")
+                .classList.toggle("active");
+        }
+
+        function togglePopup2() {
+            document.getElementById("popup-2")
+                .classList.toggle("active");
+
+        }
+    </script>
+</body>
